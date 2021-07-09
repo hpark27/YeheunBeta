@@ -46,7 +46,6 @@ class OfferingActivity:AppCompatActivity() {
                     val id = contents[0].id.toString()
                     val url = contents[0].url.toString()
 
-                    Toast.makeText(applicationContext, url, Toast.LENGTH_SHORT).show()
                     if (id.isNotEmpty()) {
                         // show id
                         binding.offeringId.text = id
@@ -59,9 +58,7 @@ class OfferingActivity:AppCompatActivity() {
 
                     if (url.isEmpty()) {
                         Toast.makeText(
-                            applicationContext,
-                            getString(R.string.offering_noqr),
-                            Toast.LENGTH_SHORT
+                            applicationContext, getString(R.string.offering_noqr), Toast.LENGTH_SHORT
                         ).show()
                     }
                 }
